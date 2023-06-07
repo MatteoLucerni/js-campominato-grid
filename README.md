@@ -9,8 +9,10 @@
         - il numero massimo delle celle sarà 100
     - **ALTRIMENTI SE** seleziona normal:
         - il numero massimo delle celle sarà 81
+        - la larghezza delle celle si adatterà
     - **ALTRIMENTI** seleziona hard:
         - il numero massimo delle celle sarà 49
+        - la larghezza delle celle si adatterà
 - calcolo in numero massimo di celle
 - Creo la singola cella
 - **FINO A CHE** non ho raggiunto il numero massimo di celle:
