@@ -19,12 +19,11 @@ buttonPlay.addEventListener('click', function(){
     grid.innerHTML = '';
 
     // parametri per la griglia
-    let mode = 1;
     let rows = 10;
     let cols = 10;
 
-    // difficoltà
-    mode = parseInt(difficulty.value);
+    // calcolo difficoltà
+    const mode = parseInt(difficulty.value);
     if(mode === 2){
         rows = 9;
         cols = 9;
@@ -41,10 +40,14 @@ buttonPlay.addEventListener('click', function(){
         const cell = grid.appendChild(createCell());
         const cellIndex = i + 1;
         cell.innerText = cellIndex;
+
+        //aggiungo un event listener ad ogni cella
         cell.addEventListener('click', function(){
             console.log('Cell number: ' + cellIndex);
             cell.classList.toggle('clicked');
         });
+        
+        // ridimensiono la griglia
         if(mode === 2){
             cell.classList.add('hw-9')
         } else if(mode === 3){
