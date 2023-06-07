@@ -1,40 +1,59 @@
 console.log('JS OK');
 
 // prendo gli elementi dal DOM
-
 const buttonPlay = document.getElementById('button-play');
 const grid = document.getElementById('grid');
 const difficulty = document.getElementById('difficulty');
 
-// comparsa della griglia
-
-buttonPlay.addEventListener('click', function(){
-    grid.classList.remove('d-none');
-});
-
-// parametri per la griglia
-
-const rows = 10;
-const cols = 10;
-const cellsNumber = rows * cols;
-console.log('Max cells: ' + cellsNumber);
-
 // Creo la cella
-
 const createCell = () => {
     const cell = document.createElement('div');
-    cell.className = 'cell';
+    cell.classList.add('cell');
     return cell;
 };
 
-// creo il ciclo
+// comparsa della griglia e ridimensionamento difficoltàà
 
-for(let i = 0; i < cellsNumber; i++){
-    const cell = grid.appendChild(createCell());
-    const cellIndex = i + 1;
-    cell.innerText = cellIndex;
-    cell.addEventListener('click', function(){
-        console.log('Cell number: ' + cellIndex);
-        cell.classList.toggle('clicked');
-    });
-}
+buttonPlay.addEventListener('click', function(){
+    // reset della griglia
+    grid.innerHTML = '';
+
+    // parametri per la griglia
+    let mode = 1;
+    let rows = 10;
+    let cols = 10;
+    let cellsNumber;
+
+    // difficoltà
+    mode = parseInt(difficulty.value);
+    if(mode === 2){
+        rows = 9;
+        cols = 9;
+    } else if(mode === 3){
+        rows = 7;
+        cols = 7;
+    }
+
+    cellsNumber = rows * cols
+    console.log('Max cells: ' + cellsNumber);
+
+    // creo il ciclo
+    for(let i = 0; i < cellsNumber; i++){
+        const cell = grid.appendChild(createCell());
+        const cellIndex = i + 1;
+        cell.innerText = cellIndex;
+        cell.addEventListener('click', function(){
+            console.log('Cell number: ' + cellIndex);
+            cell.classList.toggle('clicked');
+        });
+        if(mode === 2){
+            cell.classList.add('hw-9')
+        } else if(mode === 3){
+            cell.classList.add('hw-7')
+        }
+    }
+
+    // mostro la griglia nel DOM
+    grid.classList.remove('d-none');
+    console.log(rows + 'x' + cols);
+});

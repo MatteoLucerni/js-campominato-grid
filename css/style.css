@@ -9,7 +9,7 @@ body{
     width: 700px;
 }
 
-#grid .cell{
+.cell{
     border: 2px solid white;
     color: white;
     height: calc(100% / 10);
@@ -23,4 +23,14 @@ body{
 
 .cell.clicked{
     background-color: blue;
+}
+
+.cell.hw-9{
+    height: calc(100% / 9);
+    width: calc(100% / 9);
+}
+
+.cell.hw-7{
+    height: calc(100% / 7);
+    width: calc(100% / 7);
 }
