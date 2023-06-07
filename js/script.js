@@ -6,6 +6,12 @@ const buttonPlay = document.getElementById('button-play');
 const grid = document.getElementById('grid');
 const difficulty = document.getElementById('difficulty');
 
+// comparsa della griglia
+
+buttonPlay.addEventListener('click', function(){
+    grid.classList.remove('d-none');
+});
+
 // parametri per la griglia
 
 const rows = 10;
