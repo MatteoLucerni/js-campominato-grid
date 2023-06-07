@@ -34,7 +34,7 @@ for(let i = 0; i < cellsNumber; i++){
     const cellIndex = i + 1;
     cell.innerText = cellIndex;
     cell.addEventListener('click', function(){
-        cell.classList.toggle('clicked');
         console.log('Cell number: ' + cellIndex);
+        cell.classList.toggle('clicked');
     });
 }

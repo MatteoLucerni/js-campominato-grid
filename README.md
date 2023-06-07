@@ -4,7 +4,13 @@
     - target della griglia
     - bottone per far comparire la griglia
     - select per la difficoltà
-- stabilisco quante rows e cols ha la griglia
+- stabilisco quante rows e cols ha la griglia:
+    - **SE** seleziona easy:
+        - il numero massimo delle celle sarà 100
+    - **ALTRIMENTI SE** seleziona normal:
+        - il numero massimo delle celle sarà 81
+    - **ALTRIMENTI** seleziona hard:
+        - il numero massimo delle celle sarà 49
 - calcolo in numero massimo di celle
 - Creo la singola cella
 - **FINO A CHE** non ho raggiunto il numero massimo di celle:
