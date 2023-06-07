@@ -22,7 +22,6 @@ buttonPlay.addEventListener('click', function(){
     let mode = 1;
     let rows = 10;
     let cols = 10;
-    let cellsNumber;
 
     // difficoltà
     mode = parseInt(difficulty.value);
@@ -34,7 +33,7 @@ buttonPlay.addEventListener('click', function(){
         cols = 7;
     }
 
-    cellsNumber = rows * cols
+    const cellsNumber = rows * cols
     console.log('Max cells: ' + cellsNumber);
 
     // creo il ciclo
