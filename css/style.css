@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(255, 47, 64);
+}
+
+/* grid */
+
+#grid{
+    height: 800px;
+    width: 800px;
+}
+
+#grid .cell{
+    border: 2px solid white;
+    color: white;
+    height: calc(100% / 10);
+    width: calc(100% / 10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* utils */
+
+.cell.clicked{
+    background-color: blue;
+}
