@@ -7,6 +7,7 @@ body{
 #grid{
     height: 700px;
     width: 700px;
+    animation: fallDown .2s linear;
 }
 
 .cell{
@@ -33,4 +34,16 @@ body{
 .cell.hw-7{
     height: calc(100% / 7);
     width: calc(100% / 7);
+}
+
+/* animations */
+
+@keyframes fallDown {
+    0%{
+        transform: scale(0);
+    }
+
+    100%{
+        transform: scale(1);
+    }
 }
