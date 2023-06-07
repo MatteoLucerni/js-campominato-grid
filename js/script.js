@@ -21,16 +21,14 @@ const createCell = () => {
     return cell;
 };
 
-// genero un numero casuale
-
-const getRandomNumber = (min, max) => Math.floor(Math.random() * (max + 1 - min)) + min;
-
 // creo il ciclo
 
 for(let i = 0; i < cellsNumber; i++){
     const cell = grid.appendChild(createCell());
-    cell.innerText = i + 1;
+    const cellIndex = i + 1;
+    cell.innerText = cellIndex;
     cell.addEventListener('click', function(){
         cell.classList.toggle('clicked');
+        console.log('Cell number: ' + cellIndex);
     });
 }

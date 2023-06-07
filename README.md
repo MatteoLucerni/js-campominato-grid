@@ -2,7 +2,8 @@
 
 - Prendo gli elemento dal DOM:
     - target della griglia
-    - bottone per far comparire  la griglia
+    - bottone per far comparire la griglia
+    - select per la difficoltà
 - stabilisco quante rows e cols ha la griglia
 - calcolo in numero massimo di celle
 - Creo la singola cella
