@@ -34,6 +34,7 @@ buttonPlay.addEventListener('click', function(){
 
     const cellsNumber = rows * cols
     console.log('Max cells: ' + cellsNumber);
+    console.log(rows + 'x' + cols);
 
     // creo il ciclo
     for(let i = 0; i < cellsNumber; i++){
@@ -43,10 +44,12 @@ buttonPlay.addEventListener('click', function(){
 
         //aggiungo un event listener ad ogni cella
         cell.addEventListener('click', function(){
-            console.log('Cell number: ' + cellIndex);
             cell.classList.toggle('clicked');
+
+            // verifica per bloccare il console log se la cella è attiva
+            if(cell.className.includes('clicked')) console.log('Cell number: ' + cellIndex);
         });
-        
+
         // ridimensiono la griglia
         if(mode === 2){
             cell.classList.add('hw-9')
@@ -57,5 +60,4 @@ buttonPlay.addEventListener('click', function(){
 
     // mostro la griglia nel DOM
     grid.classList.remove('d-none');
-    console.log(rows + 'x' + cols);
 });
