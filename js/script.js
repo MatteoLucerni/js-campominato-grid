@@ -38,7 +38,7 @@ buttonPlay.addEventListener('click', function(){
 
     // creo il ciclo
     for(let i = 0; i < cellsNumber; i++){
-        const cell = grid.appendChild(createCell());
+        const cell = createCell();
         const cellIndex = i + 1;
         cell.innerText = cellIndex;
 
@@ -56,6 +56,8 @@ buttonPlay.addEventListener('click', function(){
         } else if(mode === 3){
             cell.classList.add('hw-7')
         }
+
+        grid.appendChild(cell);
     }
 
     // mostro la griglia nel DOM

@@ -8,6 +8,7 @@ body{
     height: 700px;
     width: 700px;
     animation: fallDown .2s linear;
+    user-select: none;
 }
 
 .cell{
